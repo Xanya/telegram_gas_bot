@@ -79,17 +79,15 @@ def gas_prices(message):
 
     get_message_bot = message.text.strip().lower()
     if get_message_bot == "okko" or get_message_bot == "окко":
-        bot.send_message(message.chat.id, 'Вибери бензіну на {}'.format(message.text), reply_markup=gas_select_okko)
+        bot.send_message(message.chat.id, 'Вибери бензин на {}'.format(message.text), reply_markup=gas_select_okko)
     elif get_message_bot == "wog":
-        bot.send_message(message.chat.id, 'Вибери бензіну на {}'.format(message.text), reply_markup=gas_select_wog)
+        bot.send_message(message.chat.id, 'Вибери бензин на {}'.format(message.text), reply_markup=gas_select_wog)
     elif get_message_bot == "авіас":
-        bot.send_message(message.chat.id, 'Вибери бензіну на {}'.format(message.text), reply_markup=gas_select_avias)
+        bot.send_message(message.chat.id, 'Вибери бензин на {}'.format(message.text), reply_markup=gas_select_avias)
     elif get_message_bot == "glusco":
-        bot.send_message(message.chat.id, 'Вибери бензіну на {}'.format(message.text), reply_markup=gas_select_glusco)
+        bot.send_message(message.chat.id, 'Вибери бензин на {}'.format(message.text), reply_markup=gas_select_glusco)
     else:
-        bot.send_message(message.chat.id, 'Давай нормальне питання')
-    #print(PRICES)
-    #bot.send_message(message.chat.id, 'Вибери бензіну на {}'.format(message.text), reply_markup=gas_select)
+        bot.send_message(message.chat.id, 'Не вдається розпізнати')
 
     @bot.callback_query_handler(func=lambda call:True)
     def call_back(call):
